@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CC204FE31CE912D900565480 /* music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CC204FE21CE912D900565480 /* music.mp3 */; };
+		CC204FE51CE92A3500565480 /* PokemonDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC204FE41CE92A3500565480 /* PokemonDetailVC.swift */; };
 		CC43C6151CE8D1240008C469 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC43C6141CE8D1240008C469 /* AppDelegate.swift */; };
 		CC43C6171CE8D1240008C469 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC43C6161CE8D1240008C469 /* ViewController.swift */; };
 		CC43C61A1CE8D1240008C469 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC43C6181CE8D1240008C469 /* Main.storyboard */; };
@@ -42,6 +43,7 @@
 
 /* Begin PBXFileReference section */
 		CC204FE21CE912D900565480 /* music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = music.mp3; sourceTree = "<group>"; };
+		CC204FE41CE92A3500565480 /* PokemonDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokemonDetailVC.swift; sourceTree = "<group>"; };
 		CC43C6111CE8D1240008C469 /* pokedex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pokedex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC43C6141CE8D1240008C469 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CC43C6161CE8D1240008C469 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -172,6 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				CC43C6161CE8D1240008C469 /* ViewController.swift */,
+				CC204FE41CE92A3500565480 /* PokemonDetailVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -327,6 +330,7 @@
 				CC43C61D1CE8D1240008C469 /* pokedex.xcdatamodeld in Sources */,
 				CC43C6491CE8D5A30008C469 /* Pokemon.swift in Sources */,
 				CC43C6171CE8D1240008C469 /* ViewController.swift in Sources */,
+				CC204FE51CE92A3500565480 /* PokemonDetailVC.swift in Sources */,
 				CC43C6151CE8D1240008C469 /* AppDelegate.swift in Sources */,
 				CC43C64C1CE8E3D50008C469 /* PokeCell.swift in Sources */,
 			);
