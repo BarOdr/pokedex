@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CC204FE31CE912D900565480 /* music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CC204FE21CE912D900565480 /* music.mp3 */; };
 		CC43C6151CE8D1240008C469 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC43C6141CE8D1240008C469 /* AppDelegate.swift */; };
 		CC43C6171CE8D1240008C469 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC43C6161CE8D1240008C469 /* ViewController.swift */; };
 		CC43C61A1CE8D1240008C469 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC43C6181CE8D1240008C469 /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 		CC43C6491CE8D5A30008C469 /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC43C6481CE8D5A30008C469 /* Pokemon.swift */; };
 		CC43C64C1CE8E3D50008C469 /* PokeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC43C64B1CE8E3D50008C469 /* PokeCell.swift */; };
 		CC43C64E1CE8EE000008C469 /* csv.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC43C64D1CE8EE000008C469 /* csv.swift */; };
+		CC43C6531CE8FFFD0008C469 /* pokemon.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CC43C6521CE8FFFD0008C469 /* pokemon.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CC204FE21CE912D900565480 /* music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = music.mp3; sourceTree = "<group>"; };
 		CC43C6111CE8D1240008C469 /* pokedex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pokedex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC43C6141CE8D1240008C469 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CC43C6161CE8D1240008C469 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -57,6 +60,7 @@
 		CC43C6481CE8D5A30008C469 /* Pokemon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
 		CC43C64B1CE8E3D50008C469 /* PokeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokeCell.swift; sourceTree = "<group>"; };
 		CC43C64D1CE8EE000008C469 /* csv.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = csv.swift; sourceTree = "<group>"; };
+		CC43C6521CE8FFFD0008C469 /* pokemon.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = pokemon.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,7 +179,9 @@
 		CC43C6511CE8EE5C0008C469 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				CC43C6521CE8FFFD0008C469 /* pokemon.ttf */,
 				CC43C6451CE8D4190008C469 /* pokemon.csv */,
+				CC204FE21CE912D900565480 /* music.mp3 */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -287,7 +293,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC43C6531CE8FFFD0008C469 /* pokemon.ttf in Resources */,
 				CC43C6221CE8D1240008C469 /* LaunchScreen.storyboard in Resources */,
+				CC204FE31CE912D900565480 /* music.mp3 in Resources */,
 				CC43C61F1CE8D1240008C469 /* Assets.xcassets in Resources */,
 				CC43C6461CE8D4190008C469 /* pokemon.csv in Resources */,
 				CC43C61A1CE8D1240008C469 /* Main.storyboard in Resources */,
@@ -547,6 +555,7 @@
 				CC43C63E1CE8D1250008C469 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CC43C63F1CE8D1250008C469 /* Build configuration list for PBXNativeTarget "pokedexTests" */ = {
 			isa = XCConfigurationList;
@@ -555,6 +564,7 @@
 				CC43C6411CE8D1250008C469 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CC43C6421CE8D1250008C469 /* Build configuration list for PBXNativeTarget "pokedexUITests" */ = {
 			isa = XCConfigurationList;
@@ -563,6 +573,7 @@
 				CC43C6441CE8D1250008C469 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

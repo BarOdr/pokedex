@@ -7,13 +7,18 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
     
     @IBOutlet weak var collection: UICollectionView!
+    @IBOutlet weak var musicOnOffBtn: UIButton!
     
     var pokemon = [Pokemon]()
+    var musicPlayer: AVAudioPlayer!
+    var musicOnImg = UIImage(named: "unmute.png")
+    var musicOffImg = UIImage(named: "mute.png")
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +26,22 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         collection.delegate = self
         collection.dataSource = self
         
+        initAudio()
         parsePokemonCSV()
+    }
+    
+    func initAudio() {
+        
+        let path = NSBundle.mainBundle().pathForResource("music", ofType: "mp3")!
+        
+        do {
+            musicPlayer = try AVAudioPlayer(contentsOfURL: NSURL(string: path)!)
+            musicPlayer.prepareToPlay()
+            musicPlayer.numberOfLoops = -1
+            musicPlayer.play()
+        } catch let err as NSError {
+            print(err.debugDescription)
+        }
     }
 
     func parsePokemonCSV() {
@@ -72,6 +92,17 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
         return CGSizeMake(105, 105)
+    }
+    
+    @IBAction func musicBtnPressed(sender: AnyObject) {
+        
+        if musicPlayer.playing {
+            musicPlayer.stop()
+            musicOnOffBtn.setImage(musicOffImg, forState: .Normal)
+        } else {
+            musicPlayer.play()
+            musicOnOffBtn.setImage(musicOnImg, forState: .Normal)
+        }
     }
 }
 
