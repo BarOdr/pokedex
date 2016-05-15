@@ -66,9 +66,14 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <searchBar contentMode="redraw" misplaced="YES" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="t9m-Ls-MtY">
+                            <searchBar contentMode="redraw" misplaced="YES" searchBarStyle="minimal" placeholder="Search for Pokemon" translatesAutoresizingMaskIntoConstraints="NO" id="t9m-Ls-MtY">
                                 <rect key="frame" x="0.0" y="56" width="600" height="44"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="searchField.textColor">
+                                        <color key="value" red="0.95244391025641029" green="0.95244391025641029" blue="0.95244391025641029" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </searchBar>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="gnM-Hn-dVb">
                                 <rect key="frame" x="20" y="118" width="560" height="462"/>
@@ -142,6 +147,7 @@
                     <connections>
                         <outlet property="collection" destination="gnM-Hn-dVb" id="NsU-g5-Kfo"/>
                         <outlet property="musicOnOffBtn" destination="Iid-is-OBt" id="Lr4-NU-Qc1"/>
+                        <outlet property="searchBar" destination="t9m-Ls-MtY" id="mbr-bE-hP5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

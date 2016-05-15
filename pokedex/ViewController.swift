@@ -14,6 +14,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     @IBOutlet weak var collection: UICollectionView!
     @IBOutlet weak var musicOnOffBtn: UIButton!
+    @IBOutlet weak var searchBar: UISearchBar!
     
     var pokemon = [Pokemon]()
     var musicPlayer: AVAudioPlayer!
@@ -26,8 +27,11 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         collection.delegate = self
         collection.dataSource = self
         
+        setSearchBarTextColor()
         initAudio()
         parsePokemonCSV()
+        
+        
     }
     
     func initAudio() {
@@ -94,14 +98,28 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         return CGSizeMake(105, 105)
     }
     
-    @IBAction func musicBtnPressed(sender: AnyObject) {
+    @IBAction func musicBtnPressed(sender: UIButton!) {
         
         if musicPlayer.playing {
             musicPlayer.stop()
             musicOnOffBtn.setImage(musicOffImg, forState: .Normal)
+            sender.alpha = 0.5
         } else {
             musicPlayer.play()
             musicOnOffBtn.setImage(musicOnImg, forState: .Normal)
+            sender.alpha = 1.0
+        }
+    }
+    
+    func setSearchBarTextColor() {
+        
+        for subView in self.searchBar.subviews {
+            for subSubView in subView.subviews {
+                if let textField = subSubView as? UITextField {
+                    textField.attributedPlaceholder = NSAttributedString(string: NSLocalizedString("Search for Pokemon", comment: ""), attributes: [NSForegroundColorAttributeName: UIColor.whiteColor()])
+                    textField.textColor = UIColor.whiteColor()
+                }
+            }
         }
     }
 }
