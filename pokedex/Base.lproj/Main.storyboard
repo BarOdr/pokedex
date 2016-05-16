@@ -303,9 +303,9 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="200" id="q8L-5y-Ido"/>
                                                 </constraints>
-                                                <mutableString key="text">Spits fire that is hot enough to melt boulders. Known to cause forest fires unintentionally. When expelling a blast of super hot fire, the red flame at the tip of its tail burns more intensely. If CHARIZARD becomes furious, the flame at the tip of its tail flares up in a whitish-blue color. Breathing intense, hot flames, it can melt almost anything. Its breath inflicts terrible pain on enemies. Spits fire that is hot enough to melt boulders. Known to cause forest fires unintentionally. When expelling a blast of super hot fire, the red flame at the tip of its tail burns more intensely. If CHARIZARD becomes furious, the flame at the tip of its tail flares up in a whitish-blue color. Breathing intense, hot flames, it can melt almost anything. Its breath inflicts terrible pain on enemies.
+                                                <string key="text">Spits fire that is hot enough to melt boulders. Known to cause forest fires unintentionally. When expelling a blast of super hot fire, the red flame at the tip of its tail burns more intensely. If CHARIZARD becomes furious, the flame at the tip of its tail flares up in a whitish-blue color. 
 
-</mutableString>
+</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
