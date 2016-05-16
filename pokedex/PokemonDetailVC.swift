@@ -16,8 +16,17 @@ class PokemonDetailVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        nameLbl.text = pokemon.name
+        nameLbl.text = pokemon.name.capitalizedString
         
+    }
+    
+
+    @IBAction func musicBtnPressed(sender: AnyObject) {
+        
+    }
+    
+    @IBAction func backBtnPressed(sender: AnyObject) {
+        dismissViewControllerAnimated(true, completion: nil)
     }
 
 }
