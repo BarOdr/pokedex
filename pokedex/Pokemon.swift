@@ -16,7 +16,7 @@ class Pokemon {
     private var _type: String!
     private var _defense: String!
     private var _height: String!
-    private var weight: String!
+    private var _weight: String!
     private var _attack: String!
     private var _nextEvolutionTxt: String!
     private var _pokemonUrl: String!
@@ -40,8 +40,46 @@ class Pokemon {
         let url = NSURL(string: _pokemonUrl)!
         Alamofire.request(.GET, url).responseJSON { response in
             let result = response.result
+            if let dict = result.value as? Dictionary<String, AnyObject> {
+                
+                if let weight = dict["weight"] as? String {
+                    self._weight = weight
+                }
+                
+                if let height = dict["height"] as? String {
+                    self._height = height
+                }
+                
+                if let attack = dict["attack"] as? Int {
+                    self._attack = "\(attack)"
+                }
+                
+                if let defense = dict["defense"] as? Int {
+                    self._defense =  "\(defense)"
+                }
+                
+                if let types = dict["types"] as? [Dictionary<String, String>] where types.count > 0 {
+                    
+                    if let name = types[0]["name"] {
+                        self._type = name
+                    }
+                    
+                    if types.count > 1 {
+                        
+                        for i in 1 ... types.count - 1 {
+                            if let name = types[i]["name"] {
+                                self._type! += "/\(name.capitalizedString)"
+                                print(i)
+                            }
+                        }
+                    }
+                } else {
+                    self._type = "no type"
+                }
+                print(self._type)
+                
+            }
             
-            print(result.value.debugDescription)
         }
     }
 }
